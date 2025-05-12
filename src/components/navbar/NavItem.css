@@ -1,9 +1,16 @@
 .nav-item {
   text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
 .nav-item:link,
 .nav-item:visited,
 .nav-item:active {
   color: #f8f8f8;
+}
+.nav-item:hover {
+  background-color: #f8f8f8;
+  color: orangered;
 }

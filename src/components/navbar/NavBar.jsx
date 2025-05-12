@@ -8,11 +8,12 @@ function NavBar() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 478px)");
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
     const setMode = (e) => {
       setIsMobile(e.matches);
     };
     mediaQuery.addEventListener("change", setMode);
+
     setMode(mediaQuery);
     return () => mediaQuery.removeEventListener("change", setMode);
   }, []);
