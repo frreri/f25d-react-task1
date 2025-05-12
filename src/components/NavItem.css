@@ -1,0 +1,9 @@
+.nav-item {
+  text-decoration: none;
+}
+
+.nav-item:link,
+.nav-item:visited,
+.nav-item:active {
+  color: #f8f8f8;
+}
