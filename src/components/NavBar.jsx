@@ -1,15 +1,27 @@
 import NavItem from "./NavItem";
 import BurgerButton from "./BurgerButton";
 import "./NavBar.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-function NavBar({ mobileMode }) {
+function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 478px)");
+    const setMode = (e) => {
+      setIsMobile(e.matches);
+    };
+    mediaQuery.addEventListener("change", setMode);
+    setMode(mediaQuery);
+    return () => mediaQuery.removeEventListener("change", setMode);
+  }, []);
+
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
-  const navMenuClass = mobileMode
+  const navMenuClass = isMobile
     ? showMenu
       ? "nav-menu nav-menu--mobile"
       : "nav-menu nav-menu--mobile hidden"
@@ -23,7 +35,7 @@ function NavBar({ mobileMode }) {
         <NavItem name="About" url="#about" />
         <NavItem name="Contact Us" url="#contact" />
       </ul>
-      {mobileMode && <BurgerButton onClick={toggleMenu} />}
+      {isMobile && <BurgerButton onClick={toggleMenu} />}
     </nav>
   );
 }
