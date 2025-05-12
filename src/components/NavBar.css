@@ -33,3 +33,7 @@
   padding-bottom: 2rem;
   z-index: 10;
 }
+
+.hidden {
+  display: none;
+}
