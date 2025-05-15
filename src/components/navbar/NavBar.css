@@ -1,7 +1,6 @@
 .nav-bar {
   grid-area: nav;
   background-color: orangered;
-  height: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

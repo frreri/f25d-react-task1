@@ -1,37 +1,26 @@
 import NavItem from "./NavItem";
 import BurgerButton from "./BurgerButton";
 import "./NavBar.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-function NavBar() {
-  const [showMenu, setShowMenu] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+function NavBar({ isMobile }) {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
-    const setMode = (e) => {
-      setIsMobile(e.matches);
-    };
-    mediaQuery.addEventListener("change", setMode);
-
-    setMode(mediaQuery);
-    return () => mediaQuery.removeEventListener("change", setMode);
-  }, []);
+  if (!isMobile && showMobileMenu) setShowMobileMenu(false);
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu);
+    setShowMobileMenu(!showMobileMenu);
   };
 
-  const navMenuClass = isMobile
-    ? showMenu
-      ? "nav-menu nav-menu--mobile"
-      : "nav-menu nav-menu--mobile hidden"
-    : "nav-menu";
-
+  // Using short circuiting && to set classes depending on isMobile and showMobileMenu
   return (
     <nav className="nav-bar">
       <h1>F25D React Task 1</h1>
-      <ul className={navMenuClass}>
+      <ul
+        className={`nav-menu ${isMobile && "nav-menu--mobile"} ${
+          isMobile && !showMobileMenu && "hidden"
+        }`}
+      >
         <NavItem name="Home" url="#" />
         <NavItem name="About" url="#about" />
         <NavItem name="Contact Us" url="#contact" />
