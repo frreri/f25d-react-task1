@@ -17,8 +17,8 @@ function NavBar({ isMobile }) {
     <nav className="nav-bar">
       <h1>React Task 1</h1>
       <ul
-        className={`nav-menu ${isMobile && "nav-menu--mobile"} ${
-          isMobile && !showMobileMenu && "hidden"
+        className={`nav-menu${isMobile ? " nav-menu--mobile" : ""}${
+          isMobile && !showMobileMenu ? " hidden" : ""
         }`}
       >
         <NavItem
@@ -37,7 +37,7 @@ function NavBar({ isMobile }) {
           url="#contact"
         />
       </ul>
-      {isMobile && <BurgerButton onClick={toggleMenu} />}
+      {isMobile && <BurgerButton open={showMobileMenu} onClick={toggleMenu} />}
     </nav>
   );
 }

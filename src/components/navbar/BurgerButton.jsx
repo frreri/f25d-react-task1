@@ -1,9 +1,13 @@
 import "./BurgerButton.css";
 
-function BurgerButton({ onClick }) {
+function BurgerButton({ onClick, open }) {
   return (
     <button className="burger-button" onClick={onClick}>
-      <i className="fa-solid fa-bars"></i>
+      {open ? (
+        <i class="fa-solid fa-xmark"></i>
+      ) : (
+        <i className="fa-solid fa-bars"></i>
+      )}
     </button>
   );
 }

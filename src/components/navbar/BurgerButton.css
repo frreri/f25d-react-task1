@@ -1,4 +1,6 @@
 .burger-button {
+  width: 40px;
+  height: 40px;
   border: none;
   background-color: #2e3440;
   color: #e5e9f0;

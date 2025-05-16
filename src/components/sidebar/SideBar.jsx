@@ -12,8 +12,8 @@ function SideBar({ isMobile }) {
 
   return (
     <div
-      className={`side-bar ${isMobile && "side-bar--mobile"} ${
-        isMobile && !expandMobileSide && "collapsed"
+      className={`side-bar${isMobile ? " side-bar--mobile" : ""}${
+        isMobile && !expandMobileSide ? " collapsed" : ""
       }`}
     >
       {isMobile && (
