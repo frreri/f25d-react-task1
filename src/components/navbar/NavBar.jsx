@@ -15,7 +15,7 @@ function NavBar({ isMobile }) {
   // Using short circuiting && to set classes depending on isMobile and showMobileMenu
   return (
     <nav className="nav-bar">
-      <h1>React Task 1</h1>
+      <h1 className="nav-header">React Task 1</h1>
       <ul
         className={`nav-menu${isMobile ? " nav-menu--mobile" : ""}${
           isMobile && !showMobileMenu ? " hidden" : ""

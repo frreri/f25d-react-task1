@@ -4,7 +4,7 @@ function BurgerButton({ onClick, open }) {
   return (
     <button className="burger-button" onClick={onClick}>
       {open ? (
-        <i class="fa-solid fa-xmark"></i>
+        <i className="fa-solid fa-xmark"></i>
       ) : (
         <i className="fa-solid fa-bars"></i>
       )}

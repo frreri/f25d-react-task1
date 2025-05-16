@@ -8,6 +8,11 @@
   position: relative;
 }
 
+.nav-header {
+  font-size: 2rem;
+  margin: 4px;
+}
+
 .nav-menu {
   background-color: #2e3440;
   list-style: none;

@@ -8,7 +8,7 @@ function App() {
   // Setting mediaQuery eventlistener after first render, to
   // set isMobile state dynamically, in addition to media query in css file
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mediaQuery = window.matchMedia("(max-width: 540px)");
     const setMode = (e) => {
       setIsMobile(e.matches);
     };
