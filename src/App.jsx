@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import NavBar from "./components/navbar/NavBar";
+import SideBar from "./components/sidebar/SideBar";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
       <NavBar isMobile={isMobile} />
+      <SideBar isMobile={isMobile} />
     </>
   );
 }

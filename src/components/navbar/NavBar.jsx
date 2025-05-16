@@ -15,15 +15,27 @@ function NavBar({ isMobile }) {
   // Using short circuiting && to set classes depending on isMobile and showMobileMenu
   return (
     <nav className="nav-bar">
-      <h1>F25D React Task 1</h1>
+      <h1>React Task 1</h1>
       <ul
         className={`nav-menu ${isMobile && "nav-menu--mobile"} ${
           isMobile && !showMobileMenu && "hidden"
         }`}
       >
-        <NavItem name="Home" url="#" />
-        <NavItem name="About" url="#about" />
-        <NavItem name="Contact Us" url="#contact" />
+        <NavItem
+          name="Home"
+          icon={<i className="fa-solid fa-house"></i>}
+          url="#"
+        />
+        <NavItem
+          name="About"
+          icon={<i className="fa-solid fa-address-card"></i>}
+          url="#about"
+        />
+        <NavItem
+          name="Contact Us"
+          icon={<i className="fa-solid fa-phone"></i>}
+          url="#contact"
+        />
       </ul>
       {isMobile && <BurgerButton onClick={toggleMenu} />}
     </nav>

@@ -1,0 +1,16 @@
+.side-item {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: #2e3440;
+}
+
+.side-item:link,
+.side-item:visited,
+.side-item:active {
+  color: #e5e9f0;
+}
+.side-item:hover {
+  background-color: #4c566a;
+}

@@ -1,12 +1,15 @@
-# React + Vite
+# F25D React Task 1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## To test locally:
 
-Currently, two official plugins are available:
+1. Clone the repo
+2. Run "npm install" in a terminal with the repo as working directory
+3. Run "npm run dev", it is configured to open automatically in your browser
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About this project
 
-## Expanding the ESLint configuration
+This project was created as a turn in for an assignment in a react course.
+I've used both useState and useEffect to create a simple navbar + sidebar layout.
+In mobile mode you open the nav menu with a burger menu button, and the side bar expands from the side with a toggle
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+I've organized the components in a way that separates bigger parts, so the navbar related components are under the directories components -> navbar, and the sidebar related components are under components -> sidebar

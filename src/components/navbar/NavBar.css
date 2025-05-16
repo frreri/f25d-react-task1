@@ -1,16 +1,15 @@
 .nav-bar {
   grid-area: nav;
-  background-color: orangered;
+  background-color: #2e3440;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  color: #f8f8f8;
   position: relative;
 }
 
 .nav-menu {
-  background-color: orangered;
+  background-color: #2e3440;
   list-style: none;
   display: flex;
   gap: 0.5rem;

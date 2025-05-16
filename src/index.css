@@ -1,13 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #4c566a;
+  color: #e5e9f0;
+}
+
 #root {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: min(250px, 25%) 1fr;
+  grid-template-columns: min(250px, 33%) 1fr;
   grid-template-rows: 4rem 1fr;
   grid-template-areas:
     "nav nav"

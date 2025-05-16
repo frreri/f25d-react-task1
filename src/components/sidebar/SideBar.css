@@ -1,0 +1,32 @@
+.side-bar {
+  grid-area: side;
+  background-color: #3b4252;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.side-bar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.side-bar--mobile {
+  height: 60vh;
+  width: 55vw;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  z-index: 9;
+  border-bottom-right-radius: 1rem;
+  /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4); */
+}
+
+.collapsed {
+  transform: translate(-96%, -50%);
+}
